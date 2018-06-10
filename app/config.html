@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>ComFiado</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon" sizes="64x64">
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase-firestore.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../css/master.css" />
+    <link rel="stylesheet" type="text/css" href="../css/app.css" />
+</head>
+<body>
+
+    <div id="master_wrapper" class="full no_overflow">
+        <div id="master_header" class="full">
+            <div id="voltar">
+                <a href="javascript://" onclick="window.history.back()"></a>
+                <div class="env_icon">
+                    <img src="../images/icons_svg.svg" alt="">
+                </div>
+            </div>
+            <h1 class="text-center">Ajustes</h1>
+            <!-- <div id="config">
+                <a href="config.html"></a>
+                <div class="env_icon">
+                    <img src="../images/icons_svg.svg" alt="">
+                </div>
+            </div> -->
+            <div class="col container-title search-adjust search_box hide_mobile invisible">
+                <div>
+                    <input type="search" name="" value="" class="line_effect search_list" id="search-input" placeholder="Procurar item na lista" alt="Procurar item na lista">
+                    <span class="focus-border"></span>
+                </div>
+            </div>
+        </div>
+        <div id="master_side">
+            <ul id="menu" class="full">
+                <li class="menu_logo no_action"></li>
+                <li class="menu_listas">
+                    <a href="list.html"></a>
+                    <div class="env_icon">
+                        <div class="notify invisible">0</div>
+                        <img src="../images/icons_svg.svg" alt="">
+                    </div>
+                    <span>Comanda</span>
+                </li>
+                <li class="menu_historico">
+                    <a href="history.html"></a>
+                    <div class="env_icon">
+                        <img src="../images/icons_svg.svg" alt="">
+                    </div>
+                    <span>Descubra</span>
+                </li>
+                <li class="menu_grupos">
+                    <a href="products.html"></a>
+                    <div class="env_icon">
+                        <img class="antes" src="../images/icons_svg.svg" alt="">
+                    </div>
+                    <span>Grupos</span>
+                </li>
+                <li class="active menu_config">
+                    <a href="config.html"></a>
+                    <div class="env_icon">
+                        <img class="antes" src="../images/icons_svg.svg" alt="">
+                    </div>
+                    <span>Configurações</span>
+                </li>
+            </ul>
+        </div>
+        <div id="master_content" class="">
+            
+
+
+
+            
+
+            <!-- --------------------------------- -->
+
+
+            <div class="container-config">
+                <a href="javascript://" class="box col col_full">Editar dados</a>
+                <a href="javascript://" class="box col col_full">Política de privacidade</a>
+                <a href="javascript://" class="box col col_full">Sobre</a>
+                <a href="javascript://" class="box col col_full" onclick="popUp()">Sair</a>
+            </div>
+
+            <!-- -------------------------------- -->
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <div class="popup-black-overlay">
+        <div class="popup-content">
+            <div class="popup-wrap">
+                <h3 class="roboto_regular v_low_spaced">Deseja sair?</h3>
+                <div class="v_lowest_spaced"></div>
+                <a href="javascript://" onclick="popUpClose()">
+                    <button class="v_medium_spaced button-app btn-primary" href="javascript:void(0)" onclick="popUpClose()"><span></span>Não</button>
+                </a>
+                <div class="v_lowest_spaced"></div>
+                <a id="deslogar" class="btn-alt btn-large">Sim</a>
+            </div>
+        </div>
+    </div>
+
+  <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="../js/app.js"></script>
+  <script type="text/javascript" src="../js/dom.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+.lightbox{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	vertical-align: middle;
+	display: table-cell;
+	background-color: rgba(99,78,135,0.3);
+	z-index: 99;
+	display: none;
+}
+
+.lightbox .close{
+	-webkit-transition: all 400ms cubic-bezier(.31, .19, .16, 1);
+    -moz-transition: all 400ms cubic-bezier(.31, .19, .16, 1);
+    -ms-transition: all 400ms cubic-bezier(.31, .19, .16, 1);
+    -o-transition: all 400ms cubic-bezier(.31, .19, .16, 1);
+    transition: all 400ms cubic-bezier(.31, .19, .16, 1);
+}
+
+.lightbox .close{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: -15px;
+	right: -15px;
+	border-radius: 50%;
+	background-color: #3a3a3a;
+	cursor: pointer;
+}
+.lightbox .close:hover{
+	background-color: #545454;
+}
+.lightbox .close:after{
+	content: 'x';
+	color: #FFF;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+.lightbox .outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.lightbox .middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+.lightbox .inner {
+	position: relative;
+	background-color: #634E87;
+	color: #3a3a3a;
+	padding: 20px;
+    margin-left: auto;
+    margin-right: auto; 
+    width: 300px;
+}

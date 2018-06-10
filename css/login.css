@@ -1,0 +1,150 @@
+body{
+	background-image: url(../images/bgbg.png);
+    background-color: #181823;
+	background-position: 30%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.animated{
+    animation-duration: 400ms;
+}
+
+.animated2{
+    animation-duration: 1000ms;
+    animation-delay: 200ms;
+}
+
+.wrap_login{
+    position: relative;
+    height: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.delay1{
+    animation-delay: 600ms;
+}
+
+h1.grande{
+    font-size: 40px;
+    line-height: 45px;
+}
+
+.metade{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    max-width: 700px;
+}
+
+.metade .inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: table;
+    text-align: center;
+    padding: 80px;
+}
+
+.metade .inner .content{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.metade .inner .content.login,
+.metade .inner .content.cadastro{
+    height: auto;
+    padding: 0 50px;
+}
+
+.metade .inner .content.login .logo{
+    margin-bottom: 60px;
+}
+
+.metade .inner .content.cadastro .logo{
+    margin-bottom: 40px;
+}
+
+.metade .inner .content.cadastro #btn_cadastro{
+    margin-top: 40px;
+}
+
+.metade .inner .content.login .esqueci_senha{
+    position: relative;
+    display: inline-block;
+    margin: 60px 0 30px 0;
+}
+
+.metade #tabs{
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    background-color: #20202E;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.metade #tabs .tab{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 80px;
+    display: inline-block;
+    white-space: normal;
+    cursor: pointer;
+    vertical-align: middle;
+    background-color: #2E2E3D;
+    color: white;
+}
+
+.metade #tabs .tab:not(.active):hover{
+    opacity: 0.7;
+}
+
+.metade #tabs .tab.active{
+    background-color: #20202E;
+    color: #FCCB0B;
+    font-weight: 700;
+}
+
+footer{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 5px 0;
+    bottom: 0;
+    left: 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: #9B9B9B;
+}
+
+@media (max-width: 767px){
+    .wrap_login .metade:first-child{
+        display: none;
+    }
+    .wrap_login .metade{
+        width: 100%;
+    }
+    .wrap_login .metade .inner{
+        padding: 0;
+        padding-top: 80px;
+    }
+    #cadastro,
+    #login{
+        padding: 20px;
+    }
+    .v_low_spaced{
+        padding: 0;
+    }
+}

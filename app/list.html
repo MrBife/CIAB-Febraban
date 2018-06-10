@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ConFiado</title>
+	<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon" sizes="64x64">
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase-firestore.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../css/master.css" />
+    <link rel="stylesheet" type="text/css" href="../css/app.css" />
+
+</head>
+
+<body class="no_overflow">
+    
+    <div id="master_wrapper" class="full no_overflow">
+        <div id="master_header" class="full">
+            <!-- <h1 id="nomeUser"></h1> -->
+            <h1>Home</h1>
+            <!-- <div id="config">
+                <a href="config.html"></a>
+                <div class="env_icon">
+                    <img src="../images/icons_svg.svg" alt="">
+                </div>
+            </div> -->
+        </div>
+        <div id="master_side">
+            <ul id="menu" class="full">
+                <li class="menu_logo no_action"></li>
+                <li class="active menu_listas">
+                    <a href="list.html"></a>
+                    <div class="env_icon">
+                        <div class="notify invisible">0</div>
+                        <img src="../images/icons_svg.svg" alt="">
+                    </div>
+                    <span>Home</span>
+                </li>
+                <li class="menu_historico">
+                    <a href="history.html"></a>
+                    <div class="env_icon">
+                        <img src="../images/icons_svg.svg" alt="">
+                    </div>
+                    <span>Calendário</span>
+                </li>
+                <li class="menu_grupos">
+                    <a href="products.html"></a>
+                    <div class="env_icon">
+                        <img class="antes" src="../images/icons_svg.svg" alt="">
+                    </div>
+                    <span>Crédito</span>
+                </li>
+                <li class="menu_config">
+                    <a href="config.html"></a>
+                    <div class="env_icon">
+                        <img class="antes" src="../images/icons_svg.svg" alt="">
+                    </div>
+                    <span>Configurações</span>
+                </li>
+            </ul>
+        </div>
+        <div id="master_content" class="">
+
+            <!-- --------------------------------- -->
+
+            <div class="col container-title search-adjust search_box">
+                <div>
+                    <input type="text" name="" class="line_effect search_list" id="id_comanda" placeholder="Procure uma data" value="10/06/201" alt="Procurar comanda">
+                    <span class="focus-border"></span>
+                </div>
+            </div>
+
+            <div class="full">
+                <h3 class="v_low_spaced" style="padding-left:10px" id="bebidasList"></h3>
+                <div id="bebidasTable"></div>
+            </div>
+
+            <div class="full">
+                <h3 class="v_low_spaced" style="padding-left:10px" id="pratosList"></h3>
+                <div id="pratosTable"></div>
+            </div>
+
+            <div class="full">
+                <h3 class="v_low_spaced" style="padding-left:10px" id="sobremesasList"></h3>
+                <div id="sobremesasTable"></div>
+            </div>
+
+            <div id="calendario"></div>
+
+            <!-- --------------------------------- -->
+
+        </div>
+    </div>
+
+    <div class="popup-black-overlay">
+        <div class="popup-content">
+            <div class="popup-wrap">
+    
+                <div class="menu_listas top_spaced">
+                    <div class="env_icon">
+                        <img src="../images/icons_svg.svg" alt="">
+                    </div>
+                </div>
+
+                <h3 class="roboto_regular v_low_spaced">Escolha um tipo de grupo</h3>
+                <h3 class="roboto_regular v_low_spaced">Temporario / Definitivo</h3>
+
+
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+
+                <div class="col inline_block v_lowest_spaced">
+                    <div>
+                        <input type="text" name="" value="" class="line_effect text-center" placeholder="Dê um nome ao grupo">
+                        <span class="focus-border"></span>
+                    </div>
+                </div>
+
+                <div class="v_lowest_spaced"></div>
+
+                <a href="app-items-category.html">
+                    <a href="products.html" class="button v_medium_spaced button-app btn-primary"><span></span>Criar Grupo</a>
+                </a>
+
+                <div class="v_lowest_spaced"></div>
+
+                <a class="btn-alt btn-large" href="javascript:void(0)" onclick="popUpClose()">Cancelar</a>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../slick/slick.min.js"></script>
+    <script type="text/javascript" src="../js/app.js"></script>
+    <script type="text/javascript" src="../js/dom.js"></script>
+    <script type="text/javascript" src="../js/comanda.js"></script>
+
+</body>
+</html>

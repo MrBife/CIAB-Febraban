@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>ConFiado</title>
+	<meta charset="iso-8859-1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" sizes="64x64">
+
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase-firestore.js"></script>
+  
+</head>
+
+<body class="no_overflow">
+    
+    <div class="wrap_login">
+        <div class="metade">
+            <div class="inner">
+                <div class="content branco">
+                    <h1 class="grande animated fadeInLeft animated2 delay1">Pode Confiar :)</h1>
+                </div>
+            </div>
+        </div><!--
+     --><div class="metade bg_branco no_overflow animated animated2 fadeInLeft">
+            <div id="tabs">
+                <div class="tab active" data-goto="login">Login</div>
+                <div class="tab" data-goto="cadastro">Cadastre-se</div>
+            </div>
+            <div class="inner">
+
+                <!-- ************ TAB 1 ************ -->
+                <div id="login" class="content login">
+                    <img src="images/logo_orange.svg" width="270px" alt="ComFiado" class="logo">
+
+                    <div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+        
+                    <div class="col inline_block v_low_spaced">
+                        <div>
+                            <input type="email" id="txt_login" name="txt_login" value="" class="line_effect text-center" placeholder="Login">
+                            <span class="focus-border"></span>
+                        </div>
+                    </div><!--
+                 --><div class="col inline_block v_low_spaced">
+                        <div>
+                            <input type="password" id="txt_senha" name="txt_senha" value="" class="line_effect text-center" placeholder="Senha">
+                            <span class="focus-border"></span>
+                        </div>
+                    </div>
+                    
+                    <a href="" class="esqueci_senha">Esqueci minha senha</a>
+
+                    <a id="btn_login" name="btn_login" type="button" class="button btn-primary full no_margin"><span></span>Entrar</a>
+                    <br><br>
+                    <a id="loginFace" name="btn_login" type="button" class="button btn-primary full no_margin"><span></span>Entrar com Facebook</a>
+                    <!-- <a id="loginFaceCel" name="btn_login" type="button" class="button btn-primary full no_margin"><span></span>Cel</a> -->
+
+                    <!-- <button id="btn_login" name="btn_login" type="button" class="button btn-primary full no_margin"><span></span>Entrar</button> -->
+
+                </div>
+
+                <!-- ************ TAB 2 ************ -->
+                <div id="cadastro" class="content cadastro invisible">
+                    <img src="images/logo_orange.svg" width="270px" alt="ComFiado" class="logo">
+
+                    <form method="POST" action="/" id="form_cadastro" name="form_cadastro">
+                        <div class="col inline_block v_low_spaced">
+                            <div>
+                                <input type="text" id="cad_nome" name="cad_nome" value="" class="line_effect" placeholder="Nome completo" required>
+                                <span class="focus-border"></span>
+                            </div>
+                        </div><!--
+                     --><div class="col inline_block v_low_spaced">
+                            <div>
+                                <input type="email" id="cad_email" name="cad_email" value="" class="line_effect" placeholder="E-mail" required>
+                                <span class="focus-border"></span>
+                            </div>
+                        </div><!--
+                     --><div class="col inline_block v_low_spaced">
+                            <div>
+                                <input type="password" id="cad_senha" name="cad_senha" value="" class="line_effect" placeholder="Senha" required>
+                                <span class="focus-border"></span>
+                            </div>
+                        </div><!--
+                     --><div class="col inline_block v_low_spaced">
+                            <div>
+                                <input type="password" id="cad_conf_senha" name="cad_conf_senha" value="" class="line_effect" placeholder="Confirmar senha" required>
+                                <span class="focus-border"></span>
+                            </div>
+                        </div><!--
+                     --><div class="col inline_block col_media v_low_spaced">
+                            <div style="width:95%">
+                                <input type="date" id="cad_nascimento" name="cad_nascimento" value="" class="line_effect" placeholder="Data de nascimento" required>
+                                <span class="focus-border"></span>
+                            </div>
+                        </div><!--
+                     --><div class="col inline_block col_media v_low_spaced text-right">
+                            <div>
+                                <select id="cad_sexo" name="cad_sexo" class="line_effect">
+                                    <option value="0" class="invisible">Sexo</option>
+                                    <option value="M">Masculino</option>
+                                    <option value="F">Feminino</option>
+                                </select>
+                                <span class="focus-border"></span>
+                            </div>
+                        </div>
+                        
+                        <button id="btn_cadastro" name="btn_cadastro" type="submit" class="button btn-primary full"><span></span>Concluir</button>
+                        
+                    </form>
+                </div>
+            </div>
+            <footer>&copy; Confiado - 2018</footer>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/cad.js"></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var host = window.location.href;
+            if(host.indexOf("?") > 0 && host.split("?")[1] == "cadastro"){
+                $("#tabs .tab[data-goto='cadastro']").click();
+                $("#cad_nome").focus();
+            } else {
+                $("#txt_login").focus();
+            }
+        });
+    </script>
+
+</body>
+</html>
